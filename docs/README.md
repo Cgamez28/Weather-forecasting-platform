@@ -20,7 +20,7 @@ This is an application that provides users with access to accurate and up-to-dat
 
 ## Entities
 
--Administrator: name
--User: username, password, location, unit of measurement preference, logged in/not logged in
--Weather data: temperature, sensation, weather condition, humidity, wind speed
--API: request data from the weather api
+- Administrator: name
+- User: username, password, location, unit of measurement preference, logged in/not logged in
+- Weather data: temperature, sensation, weather condition, humidity, wind speed
+- API: request data from the weather api
