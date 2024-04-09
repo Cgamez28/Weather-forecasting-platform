@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" modified="2024-04-07T15:57:27.910Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="SAoDScS2OPbarQvUGben" version="24.2.2" type="google">
+  <diagram name="Page-1" id="5f0bae14-7c28-e335-631c-24af17079c00">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="39150e848f15840c-3" value="Localhost" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="370" y="160" width="360" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="39150e848f15840c-10" value="Front-End: HTML, CSS, JavaScript,&lt;div&gt;Django&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/div&gt;" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="230" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NxJSds_2IInLiBkZD6Sb-2" value="Front-End: HTML, CSS, JavaScript,&lt;div&gt;Django&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/div&gt;" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="230" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NxJSds_2IInLiBkZD6Sb-3" value="Back-End: Python, FastAPI" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="360" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NxJSds_2IInLiBkZD6Sb-5" value="Base de datos: PostgreSQL, SQLalchemy" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="490" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JoNYbx_w_PT9F2Gj3zjz-1" value="Requisitos del sistema&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;CPU: 1.0 Ghz&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;RAM: 4.0 GB&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;HDD: 100 MB&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="730" y="335" width="140" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
