@@ -9,7 +9,7 @@ This is an application that provides users with access to accurate and up-to-dat
 ## User Stories
 
 - As a user, I want to be able to register in the app, to further personalize my experience and access additional features.
-- As a user, I want the app to be able to access my device's location to receive accurate weather information for that area.
+- As an administrator, I want to be able to see the record of all the users of the application and their data, to see the users' information and have control in the application
 - As a user, I want to be able to see the current weather of my location, including temperature, weather conditions (sunny, cloudy, rainy, etc.), and wind chill, to have the necessary information about the weather in my location
 - As a user, I want to receive a future weather forecast for my location, showing the expected temperature, weather conditions and any significant changes, to know the weather changes during the day.
 - As a user, I want to be able to check the weather at other specific locations, either by manually entering the location or selecting it on an interactive map.
@@ -20,7 +20,7 @@ This is an application that provides users with access to accurate and up-to-dat
 
 ## Entities
 
-- Administrator: name
-- User: username, password, location, unit of measurement preference, logged in/not logged in
+- Administrator: name, view users, view user data
+- User: username, password, location, unit of measurement preference, logged in/not logged in, receive notifications
 - Weather data: temperature, sensation, weather condition, humidity, wind speed
 - API: request data from the weather api
