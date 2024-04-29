@@ -22,7 +22,7 @@ class Usuarios:
             else:
                 print("Error al seleccionar elija nuevamente, recuerde (1:si, 2:no)")
                 comprob = False
-                
+
     @staticmethod
     def iniciar_sesion(nombre_usuario, contraseña):
         """
@@ -35,4 +35,4 @@ class Usuarios:
         pass
 
     def cerrar_sesion(self):
-        pass
+        
