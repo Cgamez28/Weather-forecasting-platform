@@ -1,5 +1,5 @@
 class Usuarios:
-     def __init__(self):
+    def __init__(self):
         self.nombre_usuario = None
         self.contraseña = None
         self.ubicacion = None
@@ -23,7 +23,7 @@ class Usuarios:
                 print("Error al seleccionar elija nuevamente, recuerde (1:si, 2:no)")
                 comprob = False
 
-    @staticmethod
+    
     def iniciar_sesion(nombre_usuario, contraseña):
         """
         Este metodo sera usado para el login en la aplicación
@@ -35,4 +35,7 @@ class Usuarios:
         pass
 
     def cerrar_sesion(self):
-        
+        pass
+
+    def enviar_ubicacion(ubicacion):
+        ubicacion = str(input("Seleccione su ubicación "))
