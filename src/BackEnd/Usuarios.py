@@ -1,4 +1,4 @@
-class Usuarios:
+class Usuario:
     def __init__(self):
         self.nombre_usuario = None
         self.contraseña = None
@@ -37,5 +37,5 @@ class Usuarios:
     def cerrar_sesion(self):
         pass
 
-    def enviar_ubicacion(ubicacion):
+    def enviar_ubicacion(self, ubicacion):
         ubicacion = str(input("Seleccione su ubicación "))
