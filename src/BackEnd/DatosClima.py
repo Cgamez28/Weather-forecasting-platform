@@ -10,7 +10,7 @@ class Api:
         self.velocidad_viento = None
         self.api_key = "081af87fec0c61e0ae4e68e6dc52be4b"
     
-    def obtener_datos_clima(self, ubicacion: str):
+    def obtener_datos_clima(self, ubicacion):
         url = f"http://api.openweathermap.org/data/2.5/weather?q={ubicacion},uk&APPID={self.api_key}"
         res = requests.get(url)
         data = res.json()

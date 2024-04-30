@@ -1,7 +1,7 @@
 class administrador:
     def __init__(self):
-        self.nombre = nombre
-        self.__Contraseña = Contraseña
+        self.nombre = None
+        self.__Contraseña = None
         self.comprob = False
 
     def iniciar_sesion(nombre, Contraseña):
