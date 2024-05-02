@@ -7,7 +7,16 @@ class Usuario:
         self.preferencia_unidad_de_medida = None
 
     def crear_usuario(nombre_usuario, contraseña, ubicacion, tomar_recibir_notificaciones, comprob = bool):
-        """Este metodo será el encargado de realizar la creacion del usuario"""
+        """
+        Este metodo será el encargado de realizar la creacion del usuario
+        
+        Args:
+            nombre_usuario (str): El nombre de usuario
+            contraseña (str): La contraseña respectiva al nombre de usuario
+            ubicacion (str): La ubicacion del usuario
+            tomar_recibir_notificaciones (str): Toma del dato para recibir_notificaciones
+            recibir_notificaciones (str): Confirmacion del recibimiente de notificaciones del respectivo usuario
+        """
         nombre_usuario = str(input("Digite el nombre de usuario: "))
         contraseña = str(input("Digite su contraseña: "))
         ubicacion = str(input("Seleccione su ubicacion: "))
@@ -32,10 +41,14 @@ class Usuario:
             nombre_usuario (str): El nombre de usuario
             contraseña (str): La contraseña respectiva al nombre de usuario
         """
-        pass
+        
 
     def cerrar_sesion(self):
         pass
 
-    def enviar_ubicacion(self, ubicacion):
+    def enviar_ubicacion(ubicacion = str):
         ubicacion = str(input("Seleccione su ubicación "))
+        return ubicacion
+
+    def guardar_ubicacion(ubicacion = str):
+    
