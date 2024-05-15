@@ -1,9 +1,11 @@
 from fastapi import FastAPI
 from usuarios_p import Usuario, Administrador
 from core import DatosClima, Api
-
+from pydantic import BaseModel
+from usuarios_services import router_catalog
 
 app = FastAPI()
+app.include_router(router_catalog)
 
 @app.post("/obtener_datos_clima")
 def obtener_datos_clima(ubicacion: str) -> dict :   
