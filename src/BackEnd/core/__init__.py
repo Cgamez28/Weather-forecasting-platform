@@ -1,1 +1,1 @@
-from .DatosClima import DatosClima, Api
+from .DatosClima import DatosClima

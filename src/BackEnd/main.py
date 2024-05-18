@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from usuarios_p import Usuario, Administrador
-from core import DatosClima, Api
+from core import DatosClima
 from pydantic import BaseModel
 from usuarios_services import router_catalog
 
@@ -18,7 +18,7 @@ def obtener_datos_clima(ubicacion: str) -> dict :
     Retorna:
         Un diccionario el cual contiene los datos de una determinada ubicacion 
     """
-    return Api.obtener_datos_clima(ubicacion)
+    return DatosClima.obtener_datos_clima(ubicacion)
 
 @app.post("/obtener_datos_pronostico")
 def obtener_datos_pronostico(ubicacion: str) -> dict :   
@@ -31,17 +31,7 @@ def obtener_datos_pronostico(ubicacion: str) -> dict :
     Retorna:
         Un diccionario el cual contiene los datos de una determinada ubicacion 
     """
-    return Api.obtener_datos_pronostico(ubicacion)
-
-@app.get("/mostrar_datos_clima")
-def mostrar_datos_clima(datosclima: dict):   
-    """
-    Este metodo sera el encargado de mostrar al usuario los datos del clima
-    Parametros:
-        - datosclima (dict): El diccionario que contiene todos los datos del clima
-
-    """
-    return DatosClima.mostrar_datos_clima(datosclima)
+    return DatosClima.obtener_datos_pronostico(ubicacion)
 
 @app.post("/enviar_notificacion_clima")
 def enviar_notificacion_clima(Usuario: Usuario, datosclima: dict):   
