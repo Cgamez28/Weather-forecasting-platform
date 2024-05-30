@@ -1,10 +1,11 @@
-class Usuario:
-    def __init__(self):
-        self.nombre_usuario = None
-        self.contraseña = None
-        self.ubicacion = None
-        self.recibir_notificaciones = True
-        self.preferencia_unidad_de_medida = None
+from pydantic import BaseModel
+
+class Usuario(BaseModel):
+    nombre_usuario: str
+    contraseña: str
+    ubicacion: str
+    recibir_notificaciones: bool
+    preferencia_unidad_medida: str
 
     def crear_usuario(nombre_usuario, contraseña, ubicacion, tomar_recibir_notificaciones, comprob = bool):
         """

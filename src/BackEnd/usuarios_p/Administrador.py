@@ -1,4 +1,4 @@
-class administrador:
+class Administrador:
     def __init__(self):
         self.nombre = "Administrador"
         self.__Contraseña = "C0ntr4s3ñ4dm1n"

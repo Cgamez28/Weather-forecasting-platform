@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    font-family: "Oleo Script", system-ui;
+    background-color: #E1F7F5;
+    color: #1E0342;
+}
+.oleo-script-regular {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: #FFFFFF;
+  }
+  
+.oleo-script-bold {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    font-size: large;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  
+
+header {
+    background-color: #0E46A3;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .oleo-script-regular a {
+    font-size: 32px;
+    color: #FFFFFF;
+    text-decoration: none;   
+}
+
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .account button {
+    background-color: #9AC8CD;
+    font-family: "Oleo Script", system-ui;
+    color: #1E0342;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+header .account button:hover {
+    background-color: #7AB3B8;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.current-weather, .forecast {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.current-weather h1, .forecast h2 {
+    margin-top: 0;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temp-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.temp-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.temp-info {
+    margin-left: 10px;
+}
+
+.temp-info .temp {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.temp-info .real-feel {
+    font-size: 18px;
+    color: #888;
+}
+
+.additional-info {
+    margin-bottom: 20px;
+}
+
+.additional-info a {
+    color: #0E46A3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.additional-info a:hover {
+    text-decoration: underline;
+}
+
+.wind-info p {
+    margin: 5px 0;
+}
+
+.wind-info .air-quality {
+    color: green;
+}
+
+.timestamp {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+.forecast-day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.forecast-day:first-of-its-kind {
+    border-top: none;
+}
+
+.forecast-day .day-info {
+    flex: 1;
+    text-align: left;
+}
+
+.forecast-day .day-info p {
+    margin: 2px 0;
+}
+
+.forecast-day .day-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.forecast-day .precipitation {
+    font-weight: bold;
+}
+
+.weather-forecast {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #9AC8CD;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #0E46A3;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+
+tbody td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+tbody td .time{
+    background-color: #9AC8CD;
+    font-weight: bold;
+}
+
+.temp-range {
+    background-color: #E1F7F5;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+
+.icon-temp img {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-temp {
+    background-color: #E1F7F5;
+}
+
+.details, .sun {
+    background-color: #E1F7F5;
+    font-size: 0.9em;
+}
+
+.details img, .sun img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+}

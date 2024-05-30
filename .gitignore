@@ -1,5 +1,5 @@
 src/backend/backend_env
-src/backend/frontend_env
+src/frontend/frontend_env
 # Environments
 .env
 .venv
@@ -9,3 +9,4 @@ ENV/
 env.bak/
 venv.bak/
 
+.vscode
