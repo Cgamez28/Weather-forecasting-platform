@@ -51,4 +51,4 @@ class Usuario:
         return ubicacion
 
     def guardar_ubicacion(ubicacion = str):
-    
+        pass
