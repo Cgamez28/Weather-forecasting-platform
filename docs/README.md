@@ -16,11 +16,17 @@ This is an application that provides users with access to accurate and up-to-dat
 - As a user, I want to have access to additional weather details, such as humidity, wind speed, UV index, etc., to have all the weather information in a single application
 - As a user, I want the option to receive notifications about significant weather changes, such as storm alerts, drastic temperature changes, or adverse weather conditions.
 - As a user, I want to customize the unit of measurement for temperature, wind speed and other relevant measurements, to personalize the user experience
-- As a user, I want the app to maintain a history of previously viewed locations, to facilitate quick access to previous weather information.
 
 ## Entities
 
 - Administrator: name, view users, view user data
 - User: username, password, location, unit of measurement preference, logged in/not logged in, receive notifications
-- Weather data: temperature, sensation, weather condition, humidity, wind speed
-- API: request data from the weather api
+- Weather data: temperature, sensation, weather condition, humidity, wind speed, request data from the weather api
+
+## Web services
+- get weather data -> DatosClima.obtener_datos_clima POST {temperatura, sensacion termica, humedad, condicion_climatica, velocidad_viento} 
+- get forecast data -> DatosClima.obtener_datos_pronostico POST {temperatura, sensacion termica, humedad, condicion_climatica, velocidad_viento}
+- send weather notification -> DatosClima.enviar_notificacion_clima POST
+- login -> Usuario.iniciar_sesion POST {nombre_usuario, contraseña}
+- createUser -> Usuario.crear_usuario POST {nombre_usuario, contraseña, ubicacion, unidad_medida_preferencia}
+- show
