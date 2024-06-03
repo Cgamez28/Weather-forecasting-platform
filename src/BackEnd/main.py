@@ -1,7 +1,6 @@
+"""Este archivo tiene la implementación del punto de entrada para los servicios API REST."""
 from fastapi import FastAPI
-from usuarios_p import Usuario, Administrador
 from core import DatosClima
-from pydantic import BaseModel
 from usuarios_services import router_catalog
 
 app = FastAPI()

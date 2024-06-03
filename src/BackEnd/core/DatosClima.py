@@ -1,3 +1,4 @@
+""" Este archivo contiene los atributos y los metodos de la clase DatosClima"""
 import requests
 from usuarios_p import Usuario
 from pydantic import BaseModel
