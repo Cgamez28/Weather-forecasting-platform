@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp - Current weather</title>
+    <link rel="stylesheet" href="{% static '../static/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="oleo-script-regular"><a href="current_weather.html">WeatherApp</a></div>
+        <nav>
+            <ul>
+                <li><a href="weather_forecast.html">Weather forecast</a></li>
+                <li><a href="#">Record</a></li>
+                <div class="account">
+                    <button>Account</button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="current-weather">
+            <h1>Clima Actual</h1>
+            <div class="weather-details">
+                <div class="temp-section">
+                    <div class="temp-icon">
+                        <img src="{% static '../static/images/cloudy-day-2' %}" alt="Icono de clima">
+                    </div>
+                    <div class="temp-info">
+                        <span class="temp">15°C</span>
+                        <span class="real-feel">Sensacion termica 13°</span>
+                    </div>
+                </div>
+                <div class="additional-info">
+                    <p>Algunas nubes</p>
+                </div>
+                <div class="wind-info">
+                    <p>Viento: 13 km/h</p>
+                    <p>Ráfagas de viento: 15 km/h</p>
+                    <p>Calidad del aire: <span class="air-quality">Buena</span></p>
+                </div>
+            </div>
+            <div class="timestamp">20:32</div>
+        </section>
+        
+        <section class="forecast">
+            <h2>Previsión Diaria</h2>
+            <div class="forecast-day">
+                <div class="day-info">
+                    <p class="day">NOCHE 26/5</p>
+                    <p class="temp">10°C Baja</p>
+                    <p class="condition">Nublado</p>
+                </div>
+                <div class="day-icon">
+                    <img src="cloud-icon.png" alt="Icono de clima">
+                </div>
+                <div class="precipitation">25%</div>
+            </div>
+            <div class="forecast-day">
+                <div class="day-info">
+                    <p class="day">LUN. 27/5</p>
+                    <p class="temp">21°C 11°C</p>
+                    <p class="condition">Principalmente nublado</p>
+                </div>
+                <div class="day-icon">
+                    <img src="cloud-icon.png" alt="Icono de clima">
+                </div>
+                <div class="precipitation">25%</div>
+            </div>
+            <div class="forecast-day">
+                <div class="day-info">
+                    <p class="day">MAR. 28/5</p>
+                    <p class="temp">20°C 11°C</p>
+                    <p class="condition">Unos pocos chubascos breves</p>
+                </div>
+                <div class="day-icon">
+                    <img src="rain-icon.png" alt="Icono de clima">
+                </div>
+                <div class="precipitation">43%</div>
+            </div>
+            <div class="forecast-day">
+                <div class="day-info">
+                    <p class="day">MIÉ. 29/5</p>
+                    <p class="temp">19°C 12°C</p>
+                    <p class="condition">Principalmente nublado</p>
+                </div>
+                <div class="day-icon">
+                    <img src="cloud-icon.png" alt="Icono de clima">
+                </div>
+                <div class="precipitation">43%</div>
+            </div>
+            <div class="forecast-day">
+                <div class="day-info">
+                    <p class="day">JUE. 30/5</p>
+                    <p class="temp">20°C 11°C</p>
+                    <p class="condition">Posibilidad de lluvia</p>
+                </div>
+                <div class="day-icon">
+                    <img src="cloud-icon.png" alt="Icono de clima">
+                </div>
+                <div class="precipitation">63%</div>
+            </div>
+            <div class="forecast-day">
+                <div class="day-info">
+                    <p class="day">VIE. 31/5</p>
+                    <p class="temp">20°C 11°C</p>
+                    <p class="condition">Intervalos de nubes y sol</p>
+                </div>
+                <div class="day-icon">
+                    <img src="sun-cloud-icon.png" alt="Icono de clima">
+                </div>
+                <div class="precipitation">44%</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+

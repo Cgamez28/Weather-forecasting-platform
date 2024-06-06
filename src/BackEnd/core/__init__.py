@@ -1,1 +1,1 @@
-from .DatosClima import DatosClima
+from .WeatherData import WeatherData

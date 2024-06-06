@@ -1,43 +1,45 @@
-"""Este archivo tiene la implementación del punto de entrada para los servicios API REST."""
+"""This file contains the implementation of the entry point for REST API services."""
 from fastapi import FastAPI
-from core import DatosClima
-from usuarios_services import router_catalog
+from core import WeatherData
+from users_p import User
+from BackEnd.users_services import router_catalog
 
 app = FastAPI()
 app.include_router(router_catalog)
 
-@app.post("/obtener_datos_clima")
-def obtener_datos_clima(ubicacion: str) -> dict :   
+@app.post("/get_weather_data")
+def get_weather_data(location: str) -> dict:   
     """
-    Este metodo sera el encargado de obtener los datos del clima mediante la API
+    This method will be responsible for obtaining weather data through the API.
     
-    Parametros:
-        - ubicacion (str): La direccion o nombre de la ciudad a buscar en la API
+    Parameters:
+        - location (str): The address or name of the city to search in the API
         
-    Retorna:
-        Un diccionario el cual contiene los datos de una determinada ubicacion 
+    Returns:
+        A dictionary containing data for a specific location.
     """
-    return DatosClima.obtener_datos_clima(ubicacion)
+    return WeatherData().get_weather_data(location)
 
-@app.post("/obtener_datos_pronostico")
-def obtener_datos_pronostico(ubicacion: str) -> dict :   
+@app.post("/get_forecast_data")
+def get_forecast_data(location: str) -> dict:   
     """
-    Este metodo sera el encargado de obtener los datos del pronostico del clima
+    This method will be responsible for obtaining the weather forecast data.
     
-    Parametros:
-        - ubicacion (str): La direccion o nombre de la ciudad a buscar en la API
+    Parameters:
+        - location (str): The address or name of the city to search in the API
         
-    Retorna:
-        Un diccionario el cual contiene los datos de una determinada ubicacion 
+    Returns:
+        A dictionary containing data for a specific location.
     """
-    return DatosClima.obtener_datos_pronostico(ubicacion)
+    return WeatherData().get_forecast_data(location)
 
-@app.post("/enviar_notificacion_clima")
-def enviar_notificacion_clima(Usuario: Usuario, datosclima: dict):   
+@app.post("/send_weather_notification")
+def send_weather_notification(user: User, weather_data: dict):   
     """
-    Este metodo sera el encargado de mostrar al usuario los datos del clima
-    Parametros:
-        - datosclima (dict): El diccionario que contiene todos los datos del clima
-
+    This method will be responsible for showing the user the weather data.
+    
+    Parameters:
+        - user (User): The user object containing user information.
+        - weather_data (dict): The dictionary containing all the weather data.
     """
-    return DatosClima.enviar_notificacion_clima(Usuario, datosclima)
+    return WeatherData().send_weather_notification(user, weather_data)

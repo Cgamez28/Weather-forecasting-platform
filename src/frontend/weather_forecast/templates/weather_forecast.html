@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp - Weather forecast</title>
+    <link rel="stylesheet" href="{% static '../static/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="oleo-script-regular"><a href="current_weather.html">WeatherApp</a></div>
+        <nav>
+            <ul>
+                <li><a href="weather_forecast.html">Weather forecast</a></li>
+                <li><a href="#">Record</a></li>
+                <div class="account">
+                    <button>Account</button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="weather-forecast">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="date">Hoy<br></th>
+                    <th class="date">Hoy<br></th>
+                    <th class="date">Hoy<br></th>
+                    <th class="date">Hoy<br></th>
+                    <th class="date">Hoy<br></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="temp-range">
+                    <td>Temp range</td>
+                    <td>20° | 11°</td>
+                    <td>21° | 11°</td>
+                    <td>20° | 11°</td>
+                    <td>20° | 11°</td>
+                    <td>20° | 11°</td>
+                </tr>
+                <tr class="time">
+                    <td>00:00</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Rainy"><br>13°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy"><br>13°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy"><br>15°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy"><br>14°</td>
+                </tr>
+                <tr class="time">
+                    <td>03:00</td>
+                    <td><img src="../static/images/cloudy-day-3.svg" alt="Partly Cloudy"><br>20°</td>
+                    <td><img src="../static/images/cloudy-day-3.svg" alt="Partly Cloudy"><br>21°</td>
+                    <td><img src="../static/images/cloudy-day-3.svg" alt="Partly Cloudy"><br>20°</td>
+                    <td><img src="../static/images/cloudy-day-3.svg" alt="Partly Cloudy"><br>20°</td>
+                    <td><img src="../static/images/cloudy-day-3.svg" alt="Partly Cloudy"><br>20°</td>
+                </tr>
+                <tr class="time">
+                    <td>06:00</td>
+                    <td><img src="../static/images/cloudy-night-1.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-night-1.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-night-1.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-night-1.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-night-1.svg" alt="Cloudy Night"><br>15°</td>
+                </tr>
+                <tr class="time">
+                    <td>09:00</td>
+                    <td><img src="../static/images/cloudy-night-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-night-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-night-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-night-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-night-2.svg" alt="Cloudy Night"><br>15°</td>
+                </tr>
+                <tr class="time">
+                    <td>12:00</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>15°</td>
+                </tr>
+                <tr class="time">
+                    <td>15:00</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>15°</td>
+                </tr>
+                <tr class="time">
+                    <td>18:00</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>15°</td>
+                </tr>
+                <tr class="time">
+                    <td>21:00</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>15°</td>
+                </tr>
+                <tr class="time">
+                    <td>23:00</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>15°</td>
+                </tr>
+                <tr class="details">
+                    <td><img src="../static/images/1783739.png" alt="Rain"> Lluvia</td>
+                    <td>0.4 mm</td>
+                    <td>1.1 mm</td>
+                    <td>3.3 mm</td>
+                    <td>1.7 mm</td>
+                    <td>0.7 mm</td>
+                </tr>
+                <tr class="details">
+                    <td><img src="../static/images/wind_icon-icons.com_64274.png" alt="Wind"> Viento</td>
+                    <td>17 km/h</td>
+                    <td>17 km/h</td>
+                    <td>17 km/h</td>
+                    <td>16 km/h</td>
+                    <td>17 km/h</td>
+                </tr>
+                <tr class="sun">
+                    <td><img src="https://cdn.clima.com/dist/images/icons/general/svg/dawn.svg" alt="Sunrise"> Amanecer</td>
+                    <td>05:42</td>
+                    <td>05:42</td>
+                    <td>05:42</td>
+                    <td>05:42</td>
+                    <td>05:42</td>
+                </tr>
+                <tr class="sun">
+                    <td><img src="https://cdn.clima.com/dist/images/icons/general/svg/dusk.svg" alt="Sunset"> Atardecer</td>
+                    <td>18:04</td>
+                    <td>18:04</td>
+                    <td>18:05</td>
+                    <td>18:05</td>
+                    <td>18:05</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="{ static '../static/js/fechas.js'}"></script>
+    </main>
+</body>
+</html>

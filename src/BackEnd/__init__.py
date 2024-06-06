@@ -1,2 +1,2 @@
-from .core import DatosClima
-from .usuarios_p import Usuario, Administrador
+from .core import WeatherData
+from .users_p import User, Admin
