@@ -1,0 +1,66 @@
+body {
+    font-family: "Oleo Script", system-ui;
+    background-color: #E1F7F5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.register-box {
+    background-color: #1E0342;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #E1F7F5;
+}
+
+.register-box h2 {
+    margin-bottom: 20px;
+    color: #9AC8CD;
+}
+
+.textbox {
+    margin-bottom: 20px;
+}
+
+.textbox input, .textbox select {
+    font-family: "Oleo Script", system-ui;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: #1E0342;
+}
+
+.textbox input::placeholder {
+    color: #9AC8CD;
+    font-family: "Oleo Script", system-ui;
+}
+
+.btn {
+    font-family: "Oleo Script", system-ui;
+    width: 100%;
+    padding: 10px;
+    background-color: #0E46A3;
+    border: none;
+    border-radius: 5px;
+    color: #E1F7F5;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #9AC8CD;
+    color: #1E0342;
+}

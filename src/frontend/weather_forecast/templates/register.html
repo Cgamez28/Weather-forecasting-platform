@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp - register</title>
+    <link rel="stylesheet" href="{% static '../static/css/registerstyles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="register-box">
+            <h2>Register</h2>
+            <form id="registerForm" method="post">
+                <div class="textbox">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" id="location" name="location" placeholder="Location" required>
+                </div>
+                <h4>Receive notifications</h4>
+                <div class="textbox">
+                    <select id="receive_notifications" name="receive_notifications">
+                        <option value="True">Yes</option>
+                        <option value="False">No</option>
+                    </select>
+                </div>
+                <h4>Preference unit measurement</h4>
+                <div class="textbox">
+                    
+                    <select id="preference_unit_measurement" name="preference_unit_measurement">
+                        <option value="metric">Metric</option>
+                        <option value="imperial">Imperial</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
