@@ -11,7 +11,11 @@ import requests
 app = FastAPI()
 app.include_router(router_users)
 
-origins = ["http://localhost", "http://localhost:5500"]
+origins = [
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000/weather/weather_forecast/"
+]
 
 app.add_middleware(
     CORSMiddleware,
@@ -44,10 +48,10 @@ def get_weather_data(location: str) -> dict:
     weather_data = {
         "date": "Today",
         "temperature": temperature,
-        "feels like": feels_like,
+        "feels_like": feels_like,
         "humidity": humidity,
-        "weather condition": weather_condition,
-        "wind speed": wind_speed
+        "weather_condition": weather_condition,
+        "wind_speed": wind_speed
     }
     return weather_data 
 
@@ -76,10 +80,10 @@ def get_forecast_data(time:str, location: str) -> dict:
     forecast_data = {
         "date": date,
         "temperature": temperature,
-        "feels like": feels_like,
+        "feels_like": feels_like,
         "humidity": humidity,
-        "weather condition": weather_condition,
-        "wind speed": wind_speed
+        "weather_condition": weather_condition,
+        "wind_speed": wind_speed
     }
     return forecast_data
 

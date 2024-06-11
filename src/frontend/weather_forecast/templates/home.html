@@ -8,12 +8,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static '../static/css/homeStyle.css' %}">
-    <title>Weather.com</title>
+    <title>WeatherApp</title>
 </head>
 <body>
     <header>
         <div class="welcome">
-            <h1 class="text">Welcome to WEATHER.COM</h1>
+            <h1 class="text">Welcome to WeatherApp</h1>
             <h3 class="text">Check your weather, check the weather of places around the world</h3>
             <h3 id="consData" class="text">Check their respective data</h3>
             <h3 id="allApp" class="text">All from a single application</h3>
@@ -21,21 +21,22 @@
         </div>
     </header>
     <div class="container">
-    <div class="form">
-        <h1>LOGIN</h1>
-        <form method="post">
-            <div class="username">
-                <input type="text" required>
-                <label>Username</label>
-            </div>
-            <div class="password">
-                <input type="password" required>
-                <label>Password</label>
-            </div>
-            <input type="submit" value="Login">
-            <input type="button" value="Register">
-        </form>
+        <div class="form">
+            <h1>LOGIN</h1>
+            <form id="loginForm" method="post">
+                <div class="username">
+                    <input type="text" id="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="password">
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                </div>
+                <input type="submit" id="loginButton" value="Login">
+                <input type="button" value="Register" onclick="window.location.href = 'http://127.0.0.1:8000/weather/register'">
+            </form>
+        </div>
     </div>
-    </div>
+    <script src="{% static '../static/js/scripthome.js' %}"></script>
 </body>
 </html>

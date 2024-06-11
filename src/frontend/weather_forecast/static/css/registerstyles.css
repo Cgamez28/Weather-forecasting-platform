@@ -3,10 +3,22 @@ body {
     background-color: #E1F7F5;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
+}
+
+header {
+    background-color: #0E46A3;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .oleo-script-regular a {
+    font-size: 32px;
+    color: #FFFFFF;
+    text-decoration: none;   
 }
 
 .container {
@@ -14,6 +26,8 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-top: 5%;
+
 }
 
 .register-box {

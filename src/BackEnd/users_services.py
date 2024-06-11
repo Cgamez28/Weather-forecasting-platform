@@ -6,6 +6,7 @@ from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
 from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
 import os
+from pydantic import BaseModel
 
 router_users = APIRouter()
 
@@ -31,7 +32,9 @@ users = Table(
 )
 metadata.create_all(engine)
 
-
+class UserLogin(BaseModel):
+    username: str
+    password: str
 
 @router_users.post("/create_user")
 def create_user(user: User):
@@ -51,7 +54,7 @@ def create_user(user: User):
     return {"message": "User created successfully"}
 
 @router_users.post("/login")
-def login(username: str, password: str):
+def login(user: UserLogin):
     """
     This method will be used for logging into the application
     
@@ -59,15 +62,15 @@ def login(username: str, password: str):
         username (str): The username
         password (str): The respective password for the username
     """
-    user = session.query(users).filter(users.c.username == username).first()
+    user_record = session.query(users).filter(users.c.username == user.username).first()
     
-    if user is None:
+    if user_record is None:
         raise HTTPException(status_code=404, detail="User not found")
     
-    if user.password != password:
+    if user_record.password != user.password:
         raise HTTPException(status_code=401, detail="Incorrect password")
-    else:
-        return True
+    
+    return {"message": f"Welcome {user.username}"}
 
 
 @router_users.put("/update_location")

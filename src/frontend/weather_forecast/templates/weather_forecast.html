@@ -12,10 +12,10 @@
 </head>
 <body>
     <header>
-        <div class="oleo-script-regular"><a href="current_weather.html">WeatherApp</a></div>
+        <div class="oleo-script-regular"><a href="http://127.0.0.1:8000/weather/current_weather/">WeatherApp</a></div>
         <nav>
             <ul>
-                <li><a href="weather_forecast.html">Weather forecast</a></li>
+                <li><a href="http://127.0.0.1:8000/weather/weather_forecast/">Weather forecast</a></li>
                 <li><a href="#">Record</a></li>
                 <div class="account">
                     <button>Account</button>
@@ -23,17 +23,29 @@
             </ul>
         </nav>
     </header>
+    <section class="forecast-search">
+        <h1>Weather Forecast</h1>
+        <form id="forecastForm">
+            <input type="text" id="forecastLocation" placeholder="Enter location" required>
+            <select id="forecastUnit">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+    </section>  
     <main>
     <div class="weather-forecast">
         <table>
             <thead>
                 <tr>
                     <th></th>
-                    <th class="date">Hoy<br></th>
-                    <th class="date">Hoy<br></th>
-                    <th class="date">Hoy<br></th>
-                    <th class="date">Hoy<br></th>
-                    <th class="date">Hoy<br></th>
+                    <th class="date"><br></th>
+                    <th class="date"><br></th>
+                    <th class="date"><br></th>
+                    <th class="date"><br></th>
+                    <th class="date"><br></th>
                 </tr>
             </thead>
             <tbody>
@@ -47,78 +59,70 @@
                 </tr>
                 <tr class="time">
                     <td>00:00</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Rainy"><br>13°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy"><br>13°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy"><br>15°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Rainy"><br>13°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy"><br>13°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy"><br>15°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy"><br>14°</td>
                 </tr>
                 <tr class="time">
                     <td>03:00</td>
-                    <td><img src="../static/images/cloudy-day-3.svg" alt="Partly Cloudy"><br>20°</td>
-                    <td><img src="../static/images/cloudy-day-3.svg" alt="Partly Cloudy"><br>21°</td>
-                    <td><img src="../static/images/cloudy-day-3.svg" alt="Partly Cloudy"><br>20°</td>
-                    <td><img src="../static/images/cloudy-day-3.svg" alt="Partly Cloudy"><br>20°</td>
-                    <td><img src="../static/images/cloudy-day-3.svg" alt="Partly Cloudy"><br>20°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-3.svg' %}" alt="Partly Cloudy"><br>20°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-3.svg' %}" alt="Partly Cloudy"><br>21°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-3.svg' %}" alt="Partly Cloudy"><br>20°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-3.svg' %}" alt="Partly Cloudy"><br>20°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-3.svg' %}" alt="Partly Cloudy"><br>20°</td>
                 </tr>
                 <tr class="time">
                     <td>06:00</td>
-                    <td><img src="../static/images/cloudy-night-1.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-night-1.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-night-1.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-night-1.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-night-1.svg" alt="Cloudy Night"><br>15°</td>
+                    <td><img src="{% static '../static/images/cloudy-night-1.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-night-1.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-night-1.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-night-1.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-night-1.svg' %}" alt="Cloudy Night"><br>15°</td>
                 </tr>
                 <tr class="time">
                     <td>09:00</td>
-                    <td><img src="../static/images/cloudy-night-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-night-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-night-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-night-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-night-2.svg" alt="Cloudy Night"><br>15°</td>
+                    <td><img src="{% static '../static/images/cloudy-night-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-night-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-night-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-night-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-night-2.svg' %}" alt="Cloudy Night"><br>15°</td>
                 </tr>
                 <tr class="time">
                     <td>12:00</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>15°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>15°</td>
                 </tr>
                 <tr class="time">
                     <td>15:00</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>15°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>15°</td>
                 </tr>
                 <tr class="time">
                     <td>18:00</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>15°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>15°</td>
                 </tr>
                 <tr class="time">
                     <td>21:00</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>15°</td>
-                </tr>
-                <tr class="time">
-                    <td>23:00</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>14°</td>
-                    <td><img src="../static/images/cloudy-day-2.svg" alt="Cloudy Night"><br>15°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>14°</td>
+                    <td><img src="{% static '../static/images/cloudy-day-2.svg' %}" alt="Cloudy Night"><br>15°</td>
                 </tr>
                 <tr class="details">
-                    <td><img src="../static/images/1783739.png" alt="Rain"> Lluvia</td>
+                    <td><img src="{% static '../static/images/1783739.png' %}" alt="Rain"> Lluvia</td>
                     <td>0.4 mm</td>
                     <td>1.1 mm</td>
                     <td>3.3 mm</td>
@@ -126,7 +130,7 @@
                     <td>0.7 mm</td>
                 </tr>
                 <tr class="details">
-                    <td><img src="../static/images/wind_icon-icons.com_64274.png" alt="Wind"> Viento</td>
+                    <td><img src="{% static '../static/images/wind_icon-icons.com_64274.png' %}" alt="Wind"> Viento</td>
                     <td>17 km/h</td>
                     <td>17 km/h</td>
                     <td>17 km/h</td>
@@ -152,7 +156,9 @@
             </tbody>
         </table>
     </div>
-    <script src="{ static '../static/js/fechas.js'}"></script>
+    {% load static %}
+    <script src="{% static '../static/js/fechas.js' %}"></script>
+    <script src="{% static '../static/js/scriptweather_forecast.js' %}"></script>
     </main>
 </body>
 </html>
