@@ -1,6 +1,6 @@
 """ This file contains the attributes and methods of the WeatherData class """
 import requests
-from users_p import User
+from users_p import User 
 from pydantic import BaseModel
 
 class WeatherData(BaseModel):
@@ -79,6 +79,3 @@ class WeatherData(BaseModel):
         """
         if user.receive_notifications:
             print(f"Hello {user.username}, The current temperature is {weather_data['temperature']}")
-
-        
-    

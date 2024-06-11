@@ -1,20 +1,16 @@
-class Admin:
-    def __init__(self):
-        self.name = "Admin"
-        self.__password = "Adm1nP@ssw0rd"
-        self.authenticated = False
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+from pydantic import BaseModel
 
-    def login(self, name, password):
-        entered_name = str(input("Enter the username: "))
-        if entered_name == name:
-            while not self.authenticated:
-                entered_password = str(input("Enter your password: "))
-                if entered_password == password:
-                    self.authenticated = True
-                    print("Successfully logged in")
-                else:
-                    print("Incorrect password, please try again")
+Base = declarative_base()
 
-    def logout(self):
-        pass
-  
+class Administrator(BaseModel):
+    name: str
+    password: str
+
+
+class AdministratorDB(Base):
+    __tablename__ = 'administrators'
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
+    password = Column(String)
