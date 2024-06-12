@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const row = forecastRows[i];
             const time = times[i];
 
-            for (let j = 1; j <= 5; j++) {
+            for (let j = 1; j <= 4; j++) {
                 const dateCell = dateCells[j - 1];
                 const date = dateCell.getAttribute("data-date");
                 const datetime = `${date} ${time}`;
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     const icon = getWeatherIcon(weatherData.weather_condition);
 
                     const cell = row.cells[j];
-                    cell.innerHTML = `<img src="{% static '../static/images/${icon}' %}" alt="${weatherData.weather_condition}"><br>${temp}°${tempUnit}`;
+                    cell.innerHTML = `<img src="/static/images/${icon}" alt="${weatherData.weather_condition}"><br>${temp}°${tempUnit}`;
                 }
             }
         }
@@ -71,9 +71,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function getWeatherIcon(condition) {
         if (condition.toLowerCase().includes("clouds")) {
-            return "cloudy-day-2.svg";
+            return "cloudy-day-3.svg";
         } else if (condition.toLowerCase().includes("rain")) {
-            return "rainy.svg";
+            return "rainy-6.svg";
         } else {
             return "day.svg";
         }

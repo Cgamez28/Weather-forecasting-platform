@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = await response.json();
 
             if (response.ok) {
-                window.location.href = 'http://127.0.0.1:8000/weather/current_weather/';  // Cambia '/welcome' a la ruta deseada
+                window.location.href = 'http://127.0.0.1:8000/weather/current_weather/'; 
             } else {
                 alert(data.detail || 'Login failed. Please try again.');
             }

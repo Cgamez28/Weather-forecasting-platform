@@ -4,13 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const unitSelect = document.getElementById('unit');
 
     searchForm.addEventListener('submit', async function(event) {
-        event.preventDefault();  // Prevenir el envío del formulario
+        event.preventDefault(); 
 
         const location = searchInput.value;
         const unit = unitSelect.value;
 
         try {
-            // Realizar la solicitud de datos meteorológicos al backend
             const response = await fetch(`http://localhost:8080/get_weather_data?location=${encodeURIComponent(location)}`, {
                 method: 'GET',
                 headers: {
@@ -61,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.wind_speed').textContent = `${data.wind_speed} m/s`;
         document.querySelector('.humidity').textContent = `${data.humidity}%`;
 
-        // Actualizar la imagen basada en la condición climática
+   
         const weatherIcon = document.querySelector('.temp-icon img');
         if (data.weather_condition.toLowerCase().includes('scattered')) {
             weatherIcon.src = "/static/images/day.svg";
@@ -69,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
             weatherIcon.src = "/static/images/cloudy.svg";
         }
 
-        // Actualizar la marca de tiempo
+
         const timestamp = new Date();
         document.getElementById('timestamp').textContent = `Last updated: ${timestamp.toLocaleTimeString()}`;
     }

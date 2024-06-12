@@ -15,6 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const month = months[futureDate.getMonth()];
 
         cell.innerHTML = `${day}<br>${date} ${month}`;
-        cell.setAttribute("data-date", futureDate.toISOString().split('T')[0]);  // Añadir atributo de data con la fecha
+        cell.setAttribute("data-date", futureDate.toISOString().split('T')[0]);  
     });
 });

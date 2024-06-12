@@ -42,28 +42,29 @@ This is an application that provides users with access to accurate and up-to-dat
 ## Web Services
 
 - **Get Weather Data**:
-  - Endpoint: `/obtener_datos_clima`
-  - Method HTTP: `POST`
-  - Request: `{ "ubicacion": "string" }`
-  - Response: `{ "temperatura": float, "sensacion_termica": float, "condicion_climatica": "string", "humedad": float, "velocidad_viento": float }`
+  - Endpoint: `/get_weather_data`
+  - HTTP Method: `GET`
+  - Request: `{ "location": "string" }`
+  - Response: `{ "temperature": float, "feels_like": float, "weather_condition": "string", "humidity": float, "wind_speed": float }`
 
 - **Get Forecast Data**:
-  - Endpoint: `/obtener_pronostico_clima`
-  - Method HTTP: `POST`
-  - Request: `{ "tiempo": "string", "ubicacion": "string" }`
-  - Response: `{ "temperatura": float, "sensacion_termica": float, "condicion_climatica": "string", "humedad": float, "velocidad_viento": float }`
+  - Endpoint: `/get_weather_forecast`
+  - HTTP Method: `GET`
+  - Request: `{ "time": "string", "location": "string" }`
+  - Response: `{ "temperature": float, "feels_like": float, "weather_condition": "string", "humidity": float, "wind_speed": float }`
 
 - **Send Weather Notification**:
-  - Endpoint: `/enviar_notificacion_clima`
-  - Method HTTP: `POST`
-  - Request: `{ "notificacion": "string" }`
+  - Endpoint: `/send_weather_notification`
+  - HTTP Method: `PUT`
+  - Request: `{ "notification": "string" }`
 
 - **Login**:
   - Endpoint: `/login`
-  - Method HTTP: `POST`
-  - Request: `{ "nombre_usuario": "string", "contraseña": "string" }`
+  - HTTP Method: `POST`
+  - Request: `{ "username": "string", "password": "string" }`
 
 - **Create User**:
   - Endpoint: `/register`
-  - Method HTTP: `POST`
-  - Request: `{ "nombre_usuario": "string", "contraseña": "string", "ubicacion": "string", "unidad_medida_preferencia": "string" }`
+  - HTTP Method: `POST`
+  - Request: `{ "username": "string", "password": "string", "location": "string", "preferred_measurement_unit": "string" }`
+
