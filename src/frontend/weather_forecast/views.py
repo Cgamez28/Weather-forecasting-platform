@@ -9,5 +9,8 @@ def register(request):
 def weather_forecast(request):
     return render(request, 'weather_forecast.html')
 
+def admin(request):
+    return render(request, 'admin.html')
+
 def current_weather(request):
     return render(request, 'current_weather.html')

@@ -92,3 +92,17 @@ def update_location(username: str, location: str):
     session.commit()
     
     return {"message": "Location updated successfully"}
+
+@router_users.get("/show_users")
+def show_users():
+    query = session.query(users).all()
+    result = []
+    for user in query:
+        result.append({
+            "id": user.id,
+            "username": user.username,
+            "location": user.location,
+            "receive_notifications": user.receive_notifications,
+            "preference_unit_measurement": user.preference_unit_measurement
+        })
+    return result
